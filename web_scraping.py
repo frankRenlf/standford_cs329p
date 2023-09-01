@@ -9,4 +9,12 @@
     @Description : 
 """
 
-# if __name__ == "__main__":
+from selenium import webdriver
+
+if __name__ == "__main__":
+    chrome_options = webdriver.Chromeoptions()
+    chrome_options.headless = True
+
+    chrome = webdriver.Chrome(chrome_options=chrome_options)
+
+    page = chrome.get(url)
